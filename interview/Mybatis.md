@@ -1,0 +1,7 @@
+Mybatis
+
+Mybatis
+请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？
+dao接口里的方法，是不能重载，因为是全限名+方面名的保存和寻找策略
+dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK代理为Dao接口生成代理proxy对象，代理对象proxy会拦截接口方法，转而执行MappedStatement所代表的Sql，然后将sql执行结果返回
+区别分析
