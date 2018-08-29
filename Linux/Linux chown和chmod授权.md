@@ -35,6 +35,14 @@ r-x：可读、可执行       8-10位
 
 8-10位代表**其他人**拥有的权限
 
+第三和第四列两个root ,分别代表用户名和用户组；
+
+```
+useradd yu_test        //添加用户yu_test
+chown yu_test test.txt //改变文件用户名权限
+-rw-r--r--. 1 yu_test root   55 8月  24 17:25 test.txt
+```
+
 **十进制表示**
 
 ```
@@ -83,19 +91,16 @@ chmod -R 744 /opt/elasticsearch #修改目目录以下所有的权限
 -R             # 以递归方式更改所有的文件及子目录
 ```
 
+**chown 修改用户组**  
+
+修改 test.txt 目录所属用户为 root，用户组为 root
+
 ```
-chown zhangy:zhangy nginx.conf #将nginx.conf所属用户和组改为zhangy,zhangy
-ls -al |grep nginx.conf 
-	-rw-r--r-- 1 zhangy zhangy 0 5月 3 15:21 nginx.conf
-chown -R zhangy:zhangy www #将www目录，所属用户和组改为zhangy,zhangy
-ls -al |grep ww
-	drwxr-xr-x 2 zhangy zhangy 4096 5月 3 15:20 www #将www目录，所属用户改为root
-chown root nginx.conf 
-ls -al |grep nginx.conf
-		-rw-r--r-- 1 root zhangy 0 5月 3 15:21 nginx.conf
+chown -R root:root test.txt   
+-rw-r--r--. 1 root root   55 8月  24 17:25 test.txt
 ```
 
-**常见权限**
+常见权限**
 
 ```
 -rw------- (600) 只有所有者才有读和写的权限。
@@ -118,7 +123,7 @@ chmod 777 text.txt
 chmod rwxr--r-- test.txt   #异常，不能使用该命令来修改权限
 ```
 
-
+最后了解一下
 
 
 
