@@ -29,3 +29,17 @@ SELECT * FROM user_infoWHERE ID >=(select id from user_infolimit 0, 1) order by 
 ALTER TABLE  ptlog_login ADD INDEX onlykey_index(onlykey);
 ```
 
+### 5.SQL函数
+
+```
+CONCAT(A, B) - 连接两个字符串值以创建单个字符串输出。通常用于将两个或多个字段合并为一个字段。
+FORMAT(X, D)- 格式化数字X到D有效数字。
+CURRDATE(), CURRTIME()- 返回当前日期或时间。
+NOW（） - 将当前日期和时间作为一个值返回。
+MONTH（），DAY（），YEAR（），WEEK（），WEEKDAY（） - 从日期值中提取给定数据。
+HOUR（），MINUTE（），SECOND（） - 从时间值中提取给定数据。
+DATEDIFF（A，B） - 确定两个日期之间的差异，通常用于计算年龄
+SUBTIMES（A，B） - 确定两次之间的差异。
+FROMDAYS（INT） - 将整数天数转换为日期值。
+```
+
