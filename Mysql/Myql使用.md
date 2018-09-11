@@ -28,5 +28,5 @@ SELECT * FROM user_infoWHERE ID >=(select id from user_infolimit 0, 1) order by 
 ```
 ALTER TABLE  ptlog_login ADD INDEX onlykey_index(onlykey);
 ```
-### 5.时间戳转字符串类型
-FROM_UNIXTIME(1536246454,'%Y-%m-%d %H:%i:%S')
+
+
