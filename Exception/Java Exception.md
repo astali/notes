@@ -36,3 +36,9 @@ RequestMappingHandlerMapping': Initialization of bean failed; nested exception i
 把progress那个窗口关掉
 
 **8java.net.SocketException: Permission denied: connect**
+
+
+
+9.windows启动activemq报端口被占用
+
+Windows的一个服务占用了这个端口Internet Connection Sharing (ICS)把这个服务关闭即可

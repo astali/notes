@@ -29,4 +29,8 @@ SELECT * FROM user_infoWHERE ID >=(select id from user_infolimit 0, 1) order by 
 ALTER TABLE  ptlog_login ADD INDEX onlykey_index(onlykey);
 ```
 
+5.IP存int 无符号
+
+select inet_aton("127.0.0.1");//转换为int
+select inet_ntoa(2130706433);//转换为ip
 

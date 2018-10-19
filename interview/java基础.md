@@ -90,3 +90,53 @@ GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。
 GET只接受ASCII字符的参数的数据类型，而POST没有限制
 
 那么，post那么好为什么还用get？get效率高！。
+
+##### **HTTP与HTTPS有什么区别？**
+
+　　HTTP协议传输的数据都是未加密的，也就是明文的，因此使用HTTP协议传输隐私信息非常不安全，为了保证这些隐私数据能加密传输，于是网景公司设计了SSL（Secure Sockets Layer）协议用于对HTTP协议传输的数据进行加密，从而就诞生了HTTPS。简单来说，HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。
+
+　　HTTPS和HTTP的区别主要如下：
+
+　　1、https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。
+
+　　2、http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl加密传输协议。
+
+　　3、http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
+
+　　4、http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。
+
+
+
+**7.JVM哪些区域可能出现内存溢出（OOM）**
+
+1.Java堆 java heap space
+
+2.java栈 unable to create new native thread
+
+3.方法区和运行时常量池 PermGen space
+
+4.直接内存溢出
+
+
+
+**行锁和表锁，何时触发行锁**
+
+MySQL的InnoDB存储引擎支持事务，默认是行锁，所以数据库支持高并发
+
+SQL的更新或删除使用索引，触发行锁，未使用索引时触发表锁
+
+
+
+java8新特性有哪些
+
+1.Lambda表达式
+
+2.Optional类解决空指针异常
+
+3.DataTimeAPI 时间
+
+4.Stream API 
+
+5.方法引用
+
+6.Nashorn JavaScript引擎
