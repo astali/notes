@@ -1,0 +1,1 @@
+JAVA_OPTS = $JAVA_OPTS -server -Xms2048m -Xmx2048m -XX:PermSize = 256m -XX:MaxPermSize= 512m
