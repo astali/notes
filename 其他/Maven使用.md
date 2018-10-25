@@ -159,6 +159,8 @@ https://pan.baidu.com/s/1-Q9_SJ20TtW3tRAOSRcvcg  提取码：syrc
       <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/dubbo_interface0.0.1.jar</systemPath>
   </dependency>
 ```
+idea 新建maven优化设置
+-DarchetypeCatalog=internal:
 
 
 
