@@ -14,3 +14,5 @@ tempreg.test(strValue)
  var obj = str.parseJSON(); //由JSON字符串转换为JSON对象
  var obj = JSON.parse(str); //由JSON字符串转换为JSON对象
 var json = JSON.stringify(ob); //json对象转化为string
+
+- `JSON.stringify() `方法可以将任意的 JavaScript 值序列化成 JSON 字符串
