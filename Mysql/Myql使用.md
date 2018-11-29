@@ -66,3 +66,6 @@ SHOW INDEX FROM <tablename>;
 - MyISAM支持表锁，InnoDB支持表锁和行锁，默认为行锁
 - 表级锁：开销小，加锁快，不会出现死锁。锁定粒度大，发生锁冲突的概率最高，并发量最低
 - 行级锁：开销大，加锁慢，会出现死锁。锁力度小，发生锁冲突的概率小，并发度最高
+
+##查询mysql 哪些表正在被锁状态
+`show OPEN TABLES where In_use > 0;`

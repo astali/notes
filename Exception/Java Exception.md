@@ -37,6 +37,7 @@ RequestMappingHandlerMapping': Initialization of bean failed; nested exception i
 
 **8java.net.SocketException: Permission denied: connect**
 
+IDEA / Eclipse /maven 设置 -Djava.net.preferIPv4Stack=true
 
 
 9.windows启动activemq报端口被占用
