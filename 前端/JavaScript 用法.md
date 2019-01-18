@@ -28,5 +28,32 @@ input 标签的监听事件总结
 
 微信公众号关闭页面回到聊天窗口
 ```javascript
+网上找到的解决方法，但是比较单一，没有处理掉我的问题
+<script>
 document.addEventListener('WeixinJSBridgeReady', function(){ WeixinJSBridge.call('closeWindow'); }, false);
+或
+setTimeout(function(){WeixinJSBridge.call('closeWindow');},2000);
+</script>
+针对个人问题，IOS手机和安卓手机都能关闭(两个的前后顺序不能调换)
+<script>
+setTimeout(function(){
+  //这个可以关闭安卓系统的手机
+  document.addEventListener('WeixinJSBridgeReady', function(){ WeixinJSBridge.call('closeWindow'); }, false);
+  //这个可以关闭ios系统的手机
+  WeixinJSBridge.call('closeWindow');
+}, 1000)
+</script>
+```
+
+为select动态添加option  设置选中
+```javascript
+  $.each(eData, function(gueIndex, eGuid) {
+     document.getElementById("gameGuid").options.add(new Option(eGuid.GUIDName, eGuid.GameGUID));
+                console.log("index_",gueIndex,gameguid ,eGuid.GameGUID)
+                //设置选中
+                if(eGuid.GameGUID == gameguid){
+                    document.getElementById("gameGuid")[gueIndex+1].selected=true;
+                }
+            });
+```
 ```

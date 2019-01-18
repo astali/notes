@@ -69,3 +69,16 @@ SHOW INDEX FROM <tablename>;
 
 ##查询mysql 哪些表正在被锁状态
 `show OPEN TABLES where In_use > 0;`
+##mysql导出数据 
+```c
+//导出整个数据库中的所有数据
+mysqldump -u userName -p  dabaseName  > /tmp/fileName.sql
+//导出数据库中的某个表的数据
+mysqldump -u userName -p  dabaseName tableName > /tmp/fileName.sql 
+//导出整个数据库中的所有表结构
+mysqldump -u userName -p  -d dabaseName  > /tmp/fileName.sql
+//导出数据表id>0的数据
+ mysqldump -u userName -p  dabaseName tableName -w 'id>0' > /tmp/fileName.sql 
+//导入sql方式
+mysql -uroot -p database < fileName.sql
+```
