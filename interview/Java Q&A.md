@@ -136,3 +136,9 @@ redis 提供 6种数据淘汰策略：
 由maxmemory-policy 参数设置淘汰策略：
     CONFIG SET maxmemory-policy volatile-lru  #淘汰有过时期的最近最好使用数据
 ```
+
+**Q 能跟我聊聊HTTP/1.1 与 HTTP/1.0 的区别?**
+HTTP1.0 无状态、无连接
+HTTP1.1 持久连接、请求管道化、增加缓存处理、增加Host字段、支持断点传输
+HTTP2.0二进制分帧，多路复用、头部压缩、服务器推送
+
