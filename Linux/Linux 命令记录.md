@@ -127,13 +127,10 @@ cat file_name.txt | more
 - 查看系统安装的服务：systemctl list-units --type=service
 
 ## 文件管理
-
 ### ls
 列出/home目录下的子目录：ls -l /home
-
 ### pwd
 显示当前工作目录
-
 ### cd
 切换目录： cd /usr/local
 
@@ -256,5 +253,11 @@ cat file_name.txt | more
 - 查找规则所做行号：iptables -L INPUT --line-numbers -n
 - 根据行号删除过滤规则：iptables -D INPUT 1
 
-
-
+**查看端口占用**
+lsof -i:8080 
+**查看指定端口**
+netstat -tunlp | grep 端口
+u(udp)相关选项
+n 拒绝显示别名 能显示数字全部转化为数字
+l 监听状态
+p 程序名
