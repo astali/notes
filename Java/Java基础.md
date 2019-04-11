@@ -10,7 +10,7 @@
 
 1.HashMap不是线程安全，ConcurrentHashMap线程安全
 
-2.ConcurrentHashMap采用锁分段技术，将整个hash桶进行分段segment,
+2.ConcurrentHashMap采用锁分段技术，将整个hash桶进行分段segment(JDK7) JDK8采用CAS+synchonized,
 
 3.ConcurrentHashMap让锁的粒度更精细一些，并发性能更好
 
@@ -246,3 +246,5 @@ ClassLoader就是遵循双亲委派模型最终调用启动类加载器的类加
         ClassLoader("") 得到的class是还没有连接的
         一般情况下，这两个方法效果一样，都能装载Class。
         但如果程序依赖于Class是否被初始化，就必须用Class.forName(name)了。
+
+数组是一块连续的固定长度的内存空间
