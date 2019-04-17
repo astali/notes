@@ -70,7 +70,7 @@ SHOW INDEX FROM <tablename>;
 ##查询mysql 哪些表正在被锁状态
 `show OPEN TABLES where In_use > 0;`
 ##mysql导出数据 
-```c
+```java
 //导出整个数据库中的所有数据
 mysqldump -u userName -p  dabaseName  > /tmp/fileName.sql
 //导出数据库中的某个表的数据
@@ -82,3 +82,18 @@ mysqldump -u userName -p  -d dabaseName  > /tmp/fileName.sql
 //导入sql方式
 mysql -uroot -p database < fileName.sql
 ```
+
+
+
+**聚合函数通过作用于一组数据而只返回一个单个值，因此，在SELECT语句中出现的元素要么为一个聚合函数的输入值，要么为GROUP BY语句的参数，否则会出错。**
+
+
+
+**SQL Select语句完整的*执行顺序*【从DBMS使用者角度】：** 
+　　1、from子句组装来自不同数据源的数据； 
+　　2、where子句基于指定的条件对记录行进行筛选； 
+　　3、group by子句将数据划分为多个分组； 
+　　4、使用聚集函数进行计算； 
+　　5、使用having子句筛选分组； 
+　　6、计算所有的表达式； 
+　　7、使用order by对结果集进行排序。 

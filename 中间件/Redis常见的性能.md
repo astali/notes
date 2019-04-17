@@ -184,3 +184,5 @@ Redis会周期性的随机测试一批设置了过期时间的key并进行处理
 
 然后总结了主从复制相关的配置，其中 repl-timeout、client-output-buffer-limit slave 等对解决 Redis 主从复制中出现的问题可能会有帮助。
 
+**为什么Redis是单线程的**
+官方FAQ表示，因为Redis是基于内存的操作，CPU不是Redis的瓶颈，Redis的瓶颈最有可能是机器内存的大小或者网络带宽。既然单线程容易实现，而且CPU不会成为瓶颈，那就顺理成章地采用单线程的方案了
