@@ -66,7 +66,29 @@ acceptCount="700"//指定当所有可以使用的处理请求的线程数都被�
  
 ```
 
-\----------------------------------------------------------------------------------------------------------------------------------
+**压缩传输**
+
+```java 
+compression="on"# 打开压缩功能                
+compressionMinSize="50"      # 启用压缩的输出内容大小，默认为2KB 
+noCompressionUserAgents="gozilla, traviata"    # 对于以下的浏览器，不启用压缩    
+compressableMimeType="text/html,text/xml,text/javascript,text/css,text/plain"　# 哪些资源类型需要压缩
+
+```
+
+提示：
+
+​       Tomcat 的压缩是在客户端请求服务器对应资源后，从服务器端将资源文件压缩，再输出到客户端，由客户端的浏览器负责解压缩并浏览。相对于普通的浏览过程 HTML、CSS、Javascript和Text，它可以节省40% 左右的流量。更为重要的是，它可以对动态生成的，包括CGI、PHP、JSP、ASP、Servlet,SHTML等输出的网页也能进行压缩，压缩效率也很高。但是，压缩会增加 Tomcat 的负担，因此最好采用Nginx + Tomcat 或者 Apache + Tomcat 方式，将压缩的任务交由 Nginx/Apache 去做。
+
+**管理AJP端口**
+
+​       AJP是为 Tomcat 与 HTTP 服务器之间通信而定制的协议，能提供较高的通信速度和效率。如果tomcat前端放的是apache的时候，会使用到AJP这个连接器。由于我们公司前端是由nginx做的反向代理，因此不使用此连接器，因此需要注销掉该连接器。
+
+```
+<!--
+    ``<Connector port=``"8009"` `protocol=``"AJP/1.3"` `redirectPort=``"8443"` `/>
+-->
+```
 
 **Tomcat的JVM提示内存溢出**
 
