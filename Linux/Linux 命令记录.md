@@ -261,3 +261,5 @@ u(udp)相关选项
 n 拒绝显示别名 能显示数字全部转化为数字
 l 监听状态
 p 程序名
+
+export PATH=$PATH=/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:

@@ -27,7 +27,7 @@ RequestMappingHandlerMapping': Initialization of bean failed; nested exception i
 **5.java.lang.OutOfMemoryError: PermGen space有效解决方法**
 
 ​	1.windows系统  在 TOMCAT_HOME/bin/catalina.bat 文件 echo Using CATALINA_BASE:   "%CATALINA_BASE%"上面加入以下行：set JAVA_OPTS=%JAVA_OPTS% -server -XX:PermSize=256M -XX:MaxPermSize=512m
-	2.unix系统 在 catalina.sh 文件 echo "Using CATALINA_BASE:   $CATALINA_BASE"上面或者第一行加入以下行：set JAVA_OPTS=%JAVA_OPTS% -server -XX:PermSize=256M -XX:MaxPermSize=512m　或者加入 JAVA_OPTS="-server -Xms800m -Xmx800m -XX:PermSize=64M -XX:MaxNewSize=256m -XX:MaxPermSize=128m -Djava.awt.headless=true "''
+​	2.unix系统 在 catalina.sh 文件 echo "Using CATALINA_BASE:   $CATALINA_BASE"上面或者第一行加入以下行：set JAVA_OPTS=%JAVA_OPTS% -server -XX:PermSize=256M -XX:MaxPermSize=512m　或者加入 JAVA_OPTS="-server -Xms800m -Xmx800m -XX:PermSize=64M -XX:MaxNewSize=256m -XX:MaxPermSize=128m -Djava.awt.headless=true "''
 
 **6.创建Controllers失败，无添加@Service**
 
@@ -43,3 +43,7 @@ IDEA / Eclipse /maven 设置 -Djava.net.preferIPv4Stack=true
 9.windows启动activemq报端口被占用
 
 Windows的一个服务占用了这个端口Internet Connection Sharing (ICS)把这个服务关闭即可
+
+
+
+dial tcp 120.92.169.246:3306: connect: no route to host
