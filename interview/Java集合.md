@@ -14,15 +14,8 @@ ArrayList 和Vector是采用**数组方式存储数据**，此数组元素数大
 1.ArrayList是实现了基于动态数组的数据结构，LinkedList基于链表的数据结构。
 2.对于随机访问get和set，ArrayList觉得优于LinkedList，因为LinkedList要移动指针。
 3.对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据。
-  这一点要看实际情况的。若只对单条数据插入或删除，ArrayList的速度反而优于LinkedList。但若是批量随机的插入删除数据，LinkedList的速度大大优于ArrayList. 因为ArrayList每插入一条数据，要移动插入点及之后的所有数据。
-“你知道HashMap的工作原理吗？” “你知道HashMap的get()方法的工作原理吗？”
-HashMap是基于hashing的原理，我们使用put(key, value)存储对象到HashMap中，使用get(key)从HashMap中获取对象。当我们给put()方法传递键和值时，我们先对键调用hashCode()方法，返回的hashCode用于找到bucket位置来储存Entry对象
-“当两个对象的hashcode相同会发生什么？”
-因为hashcode相同，所以它们的bucket位置相同，‘碰撞’会发生。因为HashMap使用链表存储对象，这个Entry(包含有键值对的Map.Entry对象)会存储在链表中。
-如果HashMap的大小超过了负载因子(load factor)定义的容量，怎么办？
-默认的负载因子大小为0.75，也就是说，当一个map填满了75%的bucket时候，和其它集合类(如ArrayList等)一样，将会创建原来HashMap大小的两倍的bucket数组，来重新调整map的大小，并将原来的对象放入新的bucket数组中。这个过程叫作rehashing，因为它调用hash方法找到新的bucket位置。
 
-
+ 
 
 ## 队列
 
